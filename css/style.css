@@ -358,6 +358,112 @@ html, body {
     height: 1.1rem;
 }
 
+/* Glossy Glass Pill (Lokasi Maps) */
+.link-pill-glossy {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.34) 0%,
+        rgba(255, 255, 255, 0.16) 52%,
+        rgba(255, 255, 255, 0.28) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(16px) saturate(145%);
+    -webkit-backdrop-filter: blur(16px) saturate(145%);
+    color: #FFFFFF;
+    box-shadow:
+        0 10px 28px rgba(0, 24, 85, 0.24),
+        inset 0 1.5px 1px rgba(255, 255, 255, 0.75),
+        inset 0 -2px 8px rgba(255, 255, 255, 0.16);
+}
+
+.link-pill-glossy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4%;
+    right: 4%;
+    height: 48%;
+    border-radius: 9999px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.42) 0%,
+        rgba(255, 255, 255, 0.04) 100%
+    );
+    pointer-events: none;
+}
+
+.link-pill-glossy:hover {
+    transform: translateY(-3px) scale(1.015);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.44) 0%,
+        rgba(255, 255, 255, 0.24) 52%,
+        rgba(255, 255, 255, 0.36) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.78);
+    box-shadow:
+        0 14px 32px rgba(0, 20, 75, 0.32),
+        0 0 20px rgba(255, 255, 255, 0.28),
+        inset 0 1.5px 2px rgba(255, 255, 255, 0.9);
+}
+
+.link-pill-glossy .link-label {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 24, 80, 0.28);
+}
+
+.link-thumb-glossy {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: #FFFFFF;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.7),
+        0 4px 12px rgba(0, 24, 80, 0.18);
+}
+
+.glossy-shine {
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 100%
+    );
+    transform: skewX(-22deg);
+    animation: glossySweep 3.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glossySweep {
+    0%, 58% { left: -130%; }
+    100% { left: 160%; }
+}
+
+.copy-btn-glossy {
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.copy-btn-glossy:hover {
+    background: rgba(255, 255, 255, 0.24);
+    color: #FFFFFF;
+}
+
+.copy-btn-glossy.copied {
+    color: #A7F3D0;
+}
+
 /* Footer */
 .hub-footer {
     margin-top: 3.25rem;
